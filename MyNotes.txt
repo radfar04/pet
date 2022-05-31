@@ -1,0 +1,31 @@
+1-Create your Laravel Application
+2-Composer install
+3-cd projectname
+4-composer require laravel/jetstream && php artisan jetstream:install livewire && npm install && npm run dev
+7-npm install && npm run dev
+8-php artisan make:migration create_projectname_table (creates a db same name as project and adds user auth tables)
+9-php artisan migrate
+10-php artisan vendor:publish --force --tag=livewire:config && php artisan vendor:publish --force --tag=livewire:assets
+
+12-Open config/livewire.php and change asset_url parameter from NULL to full app path.
+‘asset_url’ => ‘http://localhost/helloworld/public’,
+
+13-Open public/mix-manifest.json and add the FULL app path.
+{
+“/js/app.js”: “/helloworld/public/js/app.js”,
+“/css/app.css”: “/helloworld/public/css/app.css”
+} 
+
+13-php artisan cache:clear && php artisan route:cache && php artisan config:cache  && php artisan view:clear && php artisan config:clear && php artisan optimize:clear && php artisan route:clear
+14- go root rename server.php to index.php
+15- put .htaccess in root
+16-to clone from git "git clone https://github.com/microsoft/winget-pkgs.git"
+
+composer install -n --ignore-platform-reqs
+php artisan key:generate
+
+php artisan storage:link
+git clone https://github.com/wakirin/Lightpick.git
+
+
+
